@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة التواصل الخاصة بي</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #000000, #434343);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .profile {
+      margin-bottom: 30px;
+    }
+    .profile img {
+      width: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+    .links a {
+      display: block;
+      margin: 10px auto;
+      padding: 12px;
+      width: 250px;
+      background: #1da1f2;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .links a:hover {
+      background: #0d8ddb;
+    }
+    .instagram { background: #e1306c; }
+    .facebook { background: #1877f2; }
+    .whatsapp { background: #25d366; }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <img src="https://via.placeholder.com/120" alt="صورة شخصية">
+    <h1>محمد فيصل</h1>
+    <p>مرحبا! تقدر تتواصل معي عبر الروابط التالية 👇</p>
+  </div>
+  <div class="links">
+    <a href="https://instagram.com/username" class="instagram">انستقرام</a>
+    <a href="https://facebook.com/username" class="facebook">فيسبوك</a>
+    <a href="https://wa.me/201234567890" class="whatsapp">واتساب</a>
+  </div>
+</body>
+</html>
