@@ -16,39 +16,48 @@
       margin-bottom: 30px;
     }
     .profile img {
-      width: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 3px solid #fff;
+      object-fit: cover; /* يخلي الصورة دايرة حتى لو الأصل مستطيل */
     }
     .links a {
       display: block;
-      margin: 10px auto;
-      padding: 12px;
-      width: 250px;
-      background: #1da1f2;
+      margin: 12px auto;
+      padding: 14px;
+      width: 280px;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 25px; /* أزرار دائرية أكثر */
       transition: 0.3s;
+      font-size: 18px;
+      font-weight: bold;
     }
     .links a:hover {
-      background: #0d8ddb;
+      transform: scale(1.05);
+      opacity: 0.9;
     }
-    .instagram { background: #e1306c; }
-    .facebook { background: #1877f2; }
-    .whatsapp { background: #25d366; }
+    .instagram { 
+      background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); 
+    }
+    .facebook { background: #0d47a1; }
+    .email { background: #ffb300; }
+    .website { background: #43a047; }
   </style>
 </head>
 <body>
   <div class="profile">
-    <img src="https://via.placeholder.com/120" alt="صورة شخصية">
+    <!-- صورتك من GitHub -->
+    <img src="https://github.com/Hamoudi4app/My-Profile/releases/download/1/1000010259-pica.png" alt="صورة شخصية">
     <h1>محمد فيصل</h1>
-    <p>مرحبا! تقدر تتواصل معي عبر الروابط التالية 👇</p>
+    <p>تقدر تتواصل معي عبر الروابط التالية 👇</p>
   </div>
   <div class="links">
-    <a href="https://instagram.com/username" class="instagram">انستقرام</a>
-    <a href="https://facebook.com/username" class="facebook">فيسبوك</a>
-    <a href="https://wa.me/201234567890" class="whatsapp">واتساب</a>
+    <a href="https://www.instagram.com/hamoudifisal" class="instagram">انستقرام</a>
+    <a href="https://www.facebook.com/profile.php?id=61579791767462" class="facebook">فيسبوك</a>
+    <a href="mailto:fysl20515@gmail.com" class="email">البريد الإلكتروني</a>
+    <a href="https://68dfbfbd4a87a.site123.me" class="website">موقعي الشخصي</a>
   </div>
 </body>
 </html>
