@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>محمد-مطور ويب</title>
+  <title>محمد فيصل | مطور ويب </title>
+
+  <!-- تحسينات SEO -->
+  <meta name="description" content="محمد فيصل – مطور ويب وتطبيقات من مصر. مهتم بتطوير ألعاب واقعية مثل BMW M4 Simulator.">
+  <meta name="keywords" content="محمد فيصل, مطور ويب, مطور ألعاب, Unity, BMW M4, Egypt, Vercel, GitHub">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,13 +23,11 @@
       overflow-x: hidden;
     }
 
-    /* زر اللغة — مضمون النقر */
     .lang-btn {
       position: fixed;
       top: 16px;
       left: 16px;
       z-index: 99999;
-      pointer-events: auto;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -46,14 +48,12 @@
       box-shadow: 0 6px 24px rgba(0,0,0,0.35);
     }
 
-    /* البروفايل دائماً في المنتصف */
     .profile {
       margin-bottom: 24px;
       padding-top: 72px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
     }
     .profile img {
@@ -65,7 +65,6 @@
       transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
-    /* الروابط ثابتة بعد الظهور */
     .links {
       display: flex;
       flex-direction: column;
@@ -88,7 +87,6 @@
       font-weight: 700;
       opacity: 0;
       animation: slideUp 0.8s ease forwards;
-      animation-fill-mode: forwards;
     }
     .links a:nth-child(1) { animation-delay: 0.35s; }
     .links a:nth-child(2) { animation-delay: 0.55s; }
@@ -99,24 +97,32 @@
       to { transform: translateY(0); opacity: 1; }
     }
 
-    /* ألوان الأزرار */
     .instagram { background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); }
     .facebook  { background: #0d47a1; }
     .email     { background: #ffb300; }
     .website   { background: #43a047; }
 
-    /* تأثير سلس للنصوص والأيقونات */
-    .smooth {
-      display: inline-block;
-      transition: opacity 0.45s ease, transform 0.45s ease;
+    .projects {
+      margin-top: 40px;
+      text-align: center;
     }
-    .hidden {
-      opacity: 0;
-      transform: translateY(10px) scale(0.9);
+    .projects h2 {
+      margin-bottom: 20px;
     }
-    .visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    .projects ul {
+      list-style: none;
+      padding: 0;
+    }
+    .projects li {
+      margin: 10px 0;
+    }
+    .projects a {
+      color: #3b82f6;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .projects a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -126,66 +132,59 @@
   </style>
 </head>
 <body>
-  <!-- زر تغيير اللغة -->
   <button id="langBtn" class="lang-btn" type="button" aria-label="Toggle language">
-    <i id="langIcon" class="fas fa-language smooth visible"></i>
-    <span id="langLabel" class="smooth visible">English</span>
+    <i id="langIcon" class="fas fa-language"></i>
+    <span id="langLabel">English</span>
   </button>
 
   <div id="content">
     <div class="profile">
       <img src="https://github.com/Hamoudi4app/My-Profile/releases/download/1/1000010259-pica.png" alt="صورة شخصية">
-      <h1 id="name" class="smooth visible">محمد فيصل</h1>
-      <p id="desc" class="smooth visible">تقدر تتواصل معي عبر الروابط التالية 👇</p>
+      <h1 id="name">محمد فيصل</h1>
+      <p id="desc">تقدر تتواصل معي عبر الروابط التالية 👇</p>
     </div>
 
     <div class="links">
       <a href="https://www.instagram.com/hamoudifisal" class="instagram" target="_blank" rel="noopener noreferrer">
-        <i id="icon-insta" class="fab fa-instagram smooth visible"></i>
-        <span id="insta" class="smooth visible">انستقرام</span>
+        <i class="fab fa-instagram"></i> انستقرام
       </a>
       <a href="https://www.facebook.com/profile.php?id=61579791767462" class="facebook" target="_blank" rel="noopener noreferrer">
-        <i id="icon-fb" class="fab fa-facebook smooth visible"></i>
-        <span id="fb" class="smooth visible">فيسبوك</span>
+        <i class="fab fa-facebook"></i> فيسبوك
       </a>
       <a href="mailto:fysl20515@gmail.com" class="email" target="_blank" rel="noopener noreferrer">
-        <i id="icon-mail" class="fas fa-envelope smooth visible"></i>
-        <span id="mail" class="smooth visible">البريد الإلكتروني</span>
+        <i class="fas fa-envelope"></i> البريد الإلكتروني
       </a>
       <a href="https://68dfbfbd4a87a.site123.me" class="website" target="_blank" rel="noopener noreferrer">
-        <i id="icon-site" class="fas fa-globe smooth visible"></i>
-        <span id="site" class="smooth visible">موقعي الشخصي</span>
+        <i class="fas fa-globe"></i> موقعي الشخصي
       </a>
+    </div>
+
+    <!-- قسم المشاريع -->
+    <div class="projects">
+      <h2>مشاريعي</h2>
+      <ul>
+        <li><a href="https://smart-translator-jx1b.vercel.app" target="_blank">🔤 Smart Translator – تطبيق ترجمة ذكي</a></li>
+        <li><a href="https://github.com/Hamoudi4app/mood-filter" target="_blank">😊 Mood Filter – فلتر مزاج بالكاميرا</a></li>
+        <li><a href="https://github.com/Hamoudi4app/protein-calculator" target="_blank">🍳 Protein Calculator – حاسبة البروتين</a></li>
+      </ul>
     </div>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const langBtn    = document.getElementById('langBtn');
-      const langLabel  = document.getElementById('langLabel');
-      const langIcon   = document.getElementById('langIcon');
-
-      const idsText = ['name','desc','insta','fb','mail','site','langLabel'];
-      const idsIcons = ['langIcon','icon-insta','icon-fb','icon-mail','icon-site'];
+      const langBtn = document.getElementById('langBtn');
+      const langLabel = document.getElementById('langLabel');
 
       const texts = {
         ar: {
           name: 'محمد فيصل',
           desc: 'تقدر تتواصل معي عبر الروابط التالية 👇',
-          insta: 'انستقرام',
-          fb: 'فيسبوك',
-          mail: 'البريد الإلكتروني',
-          site: 'موقعي الشخصي',
           btn: 'English',
           lang: 'ar', dir: 'rtl'
         },
         en: {
           name: 'Mohamed Faisal',
           desc: 'You can contact me via the links below 👇',
-          insta: 'Instagram',
-          fb: 'Facebook',
-          mail: 'Email',
-          site: 'My Website',
           btn: 'العربية',
           lang: 'en', dir: 'ltr'
         }
@@ -195,44 +194,19 @@
 
       function applyLang(langKey) {
         const t = texts[langKey];
-
-        // حركة سلسة للنصوص
-        idsText.forEach(id => {
-          const el = document.getElementById(id);
-          el.classList.remove('visible');
-          el.classList.add('hidden');
-          setTimeout(() => {
-            if (id === 'langLabel') el.textContent = t.btn;
-            else el.textContent = t[id];
-            el.classList.remove('hidden');
-            el.classList.add('visible');
-          }, 250);
-        });
-
-        // حركة سلسة للأيقونات (بدون تغيير محتواها)
-        idsIcons.forEach(id => {
-          const el = document.getElementById(id);
-          el.classList.remove('visible');
-          el.classList.add('hidden');
-          setTimeout(() => {
-            el.classList.remove('hidden');
-            el.classList.add('visible');
-          }, 250);
-        });
-
-        // تحديث اتجاه الصفحة
+        document.getElementById('name').textContent = t.name;
+        document.getElementById('desc').textContent = t.desc;
+        langLabel.textContent = t.btn;
         document.documentElement.lang = t.lang;
-        document.documentElement.dir  = t.dir;
+        document.documentElement.dir = t.dir;
       }
 
-      // الحدث الموثوق لتبديل اللغة
       langBtn.addEventListener('click', (e) => {
         e.preventDefault();
         isEnglish = !isEnglish;
         applyLang(isEnglish ? 'en' : 'ar');
       });
 
-      // تهيئة مبدئية عربية
       applyLang('ar');
     });
   </script>
